@@ -1,9 +1,13 @@
 using System;
+using System.Resources;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class cannon : MonoBehaviour
 {
+    public GameObject newMissile;
+    public GameObject Mp;
+    public missile missileMove;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,5 +30,11 @@ public class cannon : MonoBehaviour
         Vector3 newpos = transform.position;
         newpos.x = n * 30;
         transform.position = newpos;
+    }
+
+    public void shooting()
+    {
+        newMissile = Instantiate(Mp, transform.position, transform.rotation);
+        missileMove = newMissile.GetComponent<missile>();
     }
 }
