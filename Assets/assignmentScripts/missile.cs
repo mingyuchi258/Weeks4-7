@@ -12,6 +12,7 @@ public class missile : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += transform.up * 4 * Time.deltaTime;
+
+        transform.position += transform.up * 5 * Time.deltaTime;
     }
 }

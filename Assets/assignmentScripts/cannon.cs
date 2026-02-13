@@ -2,6 +2,7 @@ using System;
 using System.Resources;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.EventSystems;
 
 public class cannon : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class cannon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mouse.current.leftButton.isPressed == true)
+        if (Mouse.current.leftButton.isPressed == true && !EventSystem.current.IsPointerOverGameObject())
         {
             Vector2 mousepos = Camera.main.ScreenToWorldPoint(UnityEngine.InputSystem.Mouse.current.position.ReadValue());
             Vector2 D = mousepos - (Vector2)transform.position;
