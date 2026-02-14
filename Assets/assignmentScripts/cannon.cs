@@ -9,6 +9,12 @@ public class cannon : MonoBehaviour
     public GameObject newMissile;
     public GameObject Mp;
     public missile missileMove;
+
+    public tankV tank;
+
+    public bool R = false;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +29,26 @@ public class cannon : MonoBehaviour
             Vector2 mousepos = Camera.main.ScreenToWorldPoint(UnityEngine.InputSystem.Mouse.current.position.ReadValue());
             Vector2 D = mousepos - (Vector2)transform.position;
             transform.up = D;
+
+ 
+           
         }
+        float d = Vector2.Distance(newMissile.transform.position, tank.newpos);
+        if (d < 1)
+        {
+            Destroy(newMissile);
+            R = true;
+
+        }
+        else
+        {
+            R = false;
+        }
+
+        //if (tank.sr.bounds.Contains(newMissile.transform.position) == true)
+        //{
+        //    Destroy(newMissile);
+        //}
     }
 
     public void moveRightLeft(float n)
@@ -37,5 +62,9 @@ public class cannon : MonoBehaviour
     {
         newMissile = Instantiate(Mp, transform.position, transform.rotation);
         missileMove = newMissile.GetComponent<missile>();
+
+      
+
+
     }
 }
