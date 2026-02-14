@@ -100,7 +100,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c31ae7a4f6cf2a47ae145ce7c251193, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeV: 0
-  timemaxV: 3
   Mp: {fileID: 4670947180137430289}
-  tank: {fileID: 6026474540922278732, guid: 4ad684a430d1afb4db4cb2993e7c9944, type: 3}
+  timeV: 0
+  timemaxV: 1.8

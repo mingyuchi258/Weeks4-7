@@ -6,7 +6,7 @@ public class missile : MonoBehaviour
 
     public GameObject Mp;
     public float timeV = 0;
-    public float timemaxV = 3;
+    public float timemaxV = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

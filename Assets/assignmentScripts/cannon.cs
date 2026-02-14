@@ -67,10 +67,12 @@ public class cannon : MonoBehaviour
 
     public void shooting()
     {
-        newMissile = Instantiate(Mp, transform.position, transform.rotation);
-        missileMove = newMissile.GetComponent<missile>();
+        if (newMissile == null)
+        {
+            newMissile = Instantiate(Mp, transform.position, transform.rotation);
+            missileMove = newMissile.GetComponent<missile>();
 
-      
+        }
 
 
     }

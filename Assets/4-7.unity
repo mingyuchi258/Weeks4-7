@@ -677,6 +677,8 @@ MonoBehaviour:
   newpos: {x: 0, y: 0}
   sr: {fileID: 1094570365}
   ca: {fileID: 262389865}
+  speed: 2
+  rspeed: 0
 --- !u!212 &1094570365
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -741,7 +743,7 @@ Transform:
   m_GameObject: {fileID: 1094570363}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.24, y: 1.17, z: 0}
+  m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 3.1411085, y: 3.1411085, z: 3.1411085}
   m_ConstrainProportionsScale: 0
   m_Children:
