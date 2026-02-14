@@ -33,17 +33,24 @@ public class cannon : MonoBehaviour
  
            
         }
-        float d = Vector2.Distance(newMissile.transform.position, tank.newpos);
-        if (d < 1)
+        if (newMissile != null)
         {
-            Destroy(newMissile);
-            R = true;
+            float d = Vector2.Distance(newMissile.transform.position, tank.newpos);
+            if (d < 1)
+            {
+                Destroy(newMissile);
+                R = true;
 
+            }
+            else
+            {
+                R = false;
+            }
         }
-        else
-        {
+       else
+       {
             R = false;
-        }
+       }
 
         //if (tank.sr.bounds.Contains(newMissile.transform.position) == true)
         //{
