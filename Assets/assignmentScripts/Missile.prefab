@@ -102,4 +102,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mp: {fileID: 4670947180137430289}
   timeV: 0
-  timemaxV: 1.8
+  timemaxV: 2

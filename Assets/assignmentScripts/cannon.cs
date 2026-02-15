@@ -14,6 +14,8 @@ public class cannon : MonoBehaviour
 
     public bool R = false;
 
+    public AudioSource audiosource;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -71,6 +73,7 @@ public class cannon : MonoBehaviour
         {
             newMissile = Instantiate(Mp, transform.position, transform.rotation);
             missileMove = newMissile.GetComponent<missile>();
+            audiosource.Play();
 
         }
 

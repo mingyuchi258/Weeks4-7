@@ -10,6 +10,7 @@ public class tankV : MonoBehaviour
     public cannon ca;
     public float speed;
     public float rspeed;
+    public AudioSource audiosource;
     Vector2 left;
     Vector2 right;
     
@@ -56,6 +57,8 @@ public class tankV : MonoBehaviour
             newpos.x = Random.Range(-8, 9);
             newpos.y = Random.Range(1,5);
             transform.position = newpos;
+
+            audiosource.Play();
         }
     }
 
